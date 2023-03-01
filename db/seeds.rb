@@ -1,11 +1,12 @@
 Message.destroy_all
 
 Message.create! ([
-  {msg: 'message 1'},
-  {msg: 'message 2'},
-  {msg: 'message 3'},
-  {msg: 'message 4'},
-  {msg: 'message 5'}
+  {msg: 'Hello'},
+  {msg: 'Good Morning'},
+  {msg: 'Good Afternoon'},
+  {msg: 'Good Night'},
+  {msg: 'Greetings'}
 ])
 
 puts "Created #{Message.count} messages"
+Message.all.each {|m| puts m.msg}
