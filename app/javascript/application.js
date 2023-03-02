@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 function App() {
-  return (<h1>Hello World!</h1>);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('http://localhost:3000/messages');
+      const json = await response.json();
+      setData(json);
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <h1>Hello World!</h1>
+      <div>{JSON.stringify(data)}</div>
+    </>
+  );
 }
 
 ReactDOM.render(
