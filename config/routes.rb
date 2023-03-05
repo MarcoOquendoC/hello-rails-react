@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :messages
-  root 'root#index'
+  root 'messages#index'
+  get 'message', to: 'messages#random'
 end
