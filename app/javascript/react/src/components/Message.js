@@ -5,7 +5,6 @@ import {
   messageStatus,
   getMessage,
 } from '../redux/message.js';
-// import Loading from './Loading';
 
 const Message = () => {
   const randomMessage = useSelector(message);
@@ -25,15 +24,14 @@ const Message = () => {
   return (
     <>
       {status === 'loading' ? (
-        <Loading />
+        <h1>Loading...</h1> 
       ) : (
         <div>
           <h1>
-            <span>Greeting:</span> 
             <span>{randomMessage}</span>
           </h1>
           <button onClick={handleRandomMessage}>
-            Random
+            New Greeting 😁
           </button>
         </div>
       )}
@@ -41,4 +39,4 @@ const Message = () => {
   );
 };
 
-export default Greeting;
+export default Message;
