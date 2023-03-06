@@ -4,7 +4,7 @@ import {
   getDefaultMiddleware
 } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-import messageReducer from './message.js';
+import messageReducer from './greeting.js';
 
 // Redux store
 const store = configureStore(
