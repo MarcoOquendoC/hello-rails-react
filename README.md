@@ -139,6 +139,7 @@ Create Database
 To run the project, execute the following command:
 
 ```sh
+  yarn build
   rails s
 ``` 
 
