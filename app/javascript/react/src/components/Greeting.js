@@ -4,9 +4,9 @@ import {
   message,
   messageStatus,
   getMessage,
-} from '../redux/message.js';
+} from '../redux/greeting.js';
 
-const Message = () => {
+const Greeting = () => {
   const randomMessage = useSelector(message);
   const status = useSelector(messageStatus);
   const dispatch = useDispatch();
@@ -39,4 +39,4 @@ const Message = () => {
   );
 };
 
-export default Message;
+export default Greeting;

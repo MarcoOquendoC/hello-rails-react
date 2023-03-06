@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react'; 
 import { Route, Routes } from 'react-router-dom';
-const Message = lazy(() => import('./components/Message.js'));
+const Greeting = lazy(() => import('./components/Greeting.js'));
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         path="/"
         element={
           <Suspense fallback={<div>Loading...</div>}>
-            <Message />
+            <Greeting />
           </Suspense>
         }
       />
